@@ -11,11 +11,13 @@ export type WatchPart = {
 
 export type WatchBuild = Record<PartCategory, string>;
 
-export const partCategories: Array<{
+export type PartCategoryInfo = {
   id: PartCategory;
   label: string;
   description: string;
-}> = [
+};
+
+export const partCategories: PartCategoryInfo[] = [
   { id: "case", label: "Case", description: "Foundation and silhouette." },
   { id: "bezel", label: "Bezel", description: "Signature framing ring." },
   { id: "dial", label: "Dial", description: "The face of the watch." },

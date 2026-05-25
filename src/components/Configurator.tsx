@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import WatchPreview from "@/components/WatchPreview";
@@ -151,7 +152,7 @@ export default function Configurator() {
                           key={part.id}
                           type="button"
                           onClick={() => handleSelect(category.id, part.id)}
-                          style={{ ["--accent" as string]: part.accent }}
+                          style={{ "--accent": part.accent } as CSSProperties}
                           className={`rounded-2xl border px-4 py-4 text-left transition ${
                             isSelected
                               ? "border-transparent bg-white/10 ring-1 ring-[var(--accent)]"
